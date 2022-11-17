@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ADONETExample.Models.Avengers>
+
+<div id="showResults">
+    <h4> Список фильмов </h4>
+
+    @foreach (var Avengers in Model)
+    {
+        <ul>
+            <li>@Avengers.Id</li>
+            <li>@Avengers.title_film</li>
+            <li>@Avengers.year_film</li>
+            <li>@Avengers.genre</li>
+            <li>@Avengers.producer</li>
+
+        </ul>
+    }
+  
+
+</div>

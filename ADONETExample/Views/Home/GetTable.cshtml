@@ -1,0 +1,47 @@
+﻿@model IEnumerable<ADONETExample.Models.Avengers>
+
+@{
+    ViewBag.Title = "GetTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GetTable</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.title_film)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.year_film)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.genre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.producer)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.title_film)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.year_film)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.genre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.producer)
+        </td>
+    </tr>
+}
+
+</table>
